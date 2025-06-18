@@ -145,7 +145,7 @@ def add_review(request):
         try:
             post_review(data)
             return JsonResponse({"status": 200})
-        except Exception as (err):
+        except Exception as err:
             return JsonResponse(
                 {
                     "status": 401,
